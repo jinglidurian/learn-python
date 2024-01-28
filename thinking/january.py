@@ -62,13 +62,56 @@
 # print((one + two).split())
 
 
+# 输入一个正整数判断是不是素数
 
-# 求1--100的奇数和
-sum = 0
-for i in range(1,101,2):
-    sum += i
+# 方法1
 
-print(sum)
+# from math import sqrt
+# num = int (input('请输入一个正整数：'))
+# end = int(sqrt(num)) 
+# is_prime = True
+# '''is_prime是一个常见的函数名，用于判断一个数是否为素数，素数是只能被1或者自身整除的大于1的整数'''
+# for x in range(2, end + 1):
+#     if num % x == 0:
+#         is_prime = False
+#         break
+# if is_prime and num != 1:
+#     print('%d是素数' % num)
+# else:
+#     print('%d不是素数'% num)
+
+# 方法2（GPT提供）
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+#     if n == 2:
+#         return True
+#     if n % 2 == 0:
+#         return False
+#     for i in range(3, int(n**0.5) + 1, 2):
+#         if n % i == 0:
+#             return False
+#     return True
+
+# # 用户输入一个正整数
+# num = int(input("请输入一个正整数："))
+
+# # 判断是否为素数
+# if is_prime(num):
+#     print(num, "是素数")
+# else:
+#     print(num, "不是素数")
+
+
+
+# # 求1--100的奇数和
+# sum = 0
+# for i in range(1,101,2):
+#     sum += i
+
+# print(sum)
+
+
 
 
 
