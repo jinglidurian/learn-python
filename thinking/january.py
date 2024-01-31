@@ -104,12 +104,14 @@
 
 
 
-# # 求1--100的奇数和
-# sum = 0
-# for i in range(1,101,2):
-#     sum += i
+# # # 求1--100的奇数和
+sum = 0
+for i in range(1,101,2):
+    sum += i
 
-# print(sum)
+print(sum)
+
+
 
 
 

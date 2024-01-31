@@ -12,6 +12,12 @@
 # # sqrt 函数是 math 模块中的一个函数，用于计算给定数的平方根。
 # num = int(input('请输入一个正整数：'))
 # end = int(sqrt(num))
+
+# 为什么可以通过开平方来优化呢？因为 👇
+# 已知：一个正整数要么是由它的 2 个平方根相乘得到的，要么是由一个小于平方根的数和另一个大于平方根的数相乘得到的。
+# 推论：如果遍历至某个正整数的平方根之后，仍然没能达成 num % x == 0，那么就证明这个正整数已经是一个素数了，
+# 那么就不需要再继续向后迭代剩余的数字了，于是便可以通过 break 来提前结束掉循环，因为后续的迭代是会需要时间来计算了
+
 # is_prime = True
 # # 默认输入值为素数
 # # is_prime是一个常见的函数名，用于判断一个数是否为素数，素数是只能被1或者自身整除的大于1的整数
@@ -29,15 +35,15 @@
 
 
 # 方法2
-num = int(input('请输入一个正整数：'))
-is_prime = True
-for x in range(2,num):
-    if num % x == 0:
-        is_prime = False
-    break
-if is_prime and num != 1:
-    print('%d是素数'%num)
-else:
-    print('%d不是素数'%num)
+# num = int(input('请输入一个正整数：'))
+# is_prime = True
+# for x in range(2,num):
+#     if num % x == 0:
+#         is_prime = False
+#     break
+# if is_prime and num != 1:
+#     print('%d是素数'%num)
+# else:
+#     print('%d不是素数'%num)
 
 
