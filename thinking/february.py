@@ -72,19 +72,18 @@
 '''
 
 
-while True:
-
-    username = input('请输入用户名：')
-    if username != 'admin':continue
-   
-                             
-    while True:  
-        password = input('请输入密码：')
-        if password != '123456':continue
+# while True:
+#     username = input('请输入用户名：')
+#     if username != 'admin': continue
+                          
+#     while True:  
+#         password = input('请输入密码：')
+#         if password != '123456': continue
         
-        print('登陆成功')
-        break
-    break
+#         print('登陆成功')
+#         break
+
+#     break
         
 
 
