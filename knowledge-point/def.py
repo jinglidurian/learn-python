@@ -50,19 +50,43 @@ def add(a, b=True, c=1):#定义形参  参数就是一个变量名 定义变量�
 #真或假  可以用1 和 0代替  true理解为1  false理解为0
 add(2)
 '''
-#学生管理系统   1.把每个学生都以字典的形势存在这个列表  2.学生属性：学号，姓名，年龄
+#学生管理系统   1.把每个学生都以字典的形式存在这个列表  2.学生属性：学号，姓名，年龄
+#
 students = []
-def add_students():
+def add_student():
     number = input("请输入学号")
     name = input('请输入姓名')
     age = input('请输入年龄')
-    info ={'number':number,
+    info ={
+        'number':number,
            'name':name,
            'age':age
     }
     students.append(info)
     print(students)
-add_students()
+
+def search_student():
+    number = input('请输入需要查询的学生编号')
+    for student in students:
+        if student['number'] == number:
+            print(student)
+            return
+    print('学生不存在')
+    
+
+if __name__ == '__main__':
+    while True:
+        num = input('请输入你要执行的内容： 1.新增学生  2.查询学生 ')
+        if num == '1':
+            add_student()
+        elif num == '2':
+            search_student()
+
+           
+
+
+
+
 
 
 
