@@ -71,16 +71,77 @@ def search_student():
         if student['number'] == number:
             print(student)
             return
+        else:
+            pass
     print('学生不存在')
-    
 
+'''
+在Python中，return关键字用于从函数中返回一个值，并终止函数的执行。当函数执行到return语句时，它会将指定的值作为结果返回给调用者。
+
+以下是一个简单的示例，展示了return的使用：
+
+python
+复制
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+sum = add_numbers(3, 4)
+print(sum)  # 输出: 7
+在上面的示例中，add_numbers函数接受两个参数 a 和 b，将它们相加并将结果赋给 result 变量。然后，使用 return 关键字将 result 的值作为函数的结果返回。
+
+在调用 add_numbers(3, 4) 后，返回的结果 7 被赋给变量 sum,然后打印出来。
+
+需要注意的是，return 语句可以在函数中的任何地方使用，一旦执行到 return，函数将立即停止执行并返回结果。如果函数没有显式的 return 语句，它将默认返回 None。
+
+break代表终止循环，在循环中使用。return代表结束函数，是函数的结束符
+'''
+    
+def update_student():
+    number = input('请输入您要修改的学生编号')
+    for student in students:
+        if student['number'] == number:
+            name = input('请输入修改后的姓名')
+            age = input('请输入修改后的年龄')
+            student['name'] = name
+            student['age'] = age
+            print(student)
+            return
+            
+        else:
+            pass
+    print('学生不存在')
+        
+def delete_student():
+    number = input('请输入想要删除的学生编号')
+    for student in students:
+        if student['number'] == number:
+            students.remove(student)
+            print('删除成功')
+            return
+        
+        else:
+            pass
+    print('学生不存在')
+
+ 
 if __name__ == '__main__':
     while True:
-        num = input('请输入你要执行的内容： 1.新增学生  2.查询学生 ')
+        num = input('请输入你要执行的内容:\n1.新增学生\n2.查询学生\n3.修改学生 \n4.删除学生\n5.退出')
         if num == '1':
             add_student()
         elif num == '2':
             search_student()
+        elif num == '3':
+            update_student()
+        elif num == '4':
+            delete_student()
+        elif num == '5':
+            print('下次再见')
+            break
+        else:
+            print('输入有误 请重新输入')
+
 
            
 
